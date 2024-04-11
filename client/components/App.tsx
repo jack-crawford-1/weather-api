@@ -1,4 +1,5 @@
 import { useFruits } from '../hooks/useFruits.ts'
+import WeatherInfo from './WeatherDay.tsx'
 
 function App() {
   const { data } = useFruits()
@@ -10,6 +11,7 @@ function App() {
           Fullstack Boilerplate - with Fruits!
         </h1>
         <ul>{data && data.map((fruit) => <li key={fruit}>{fruit}</li>)}</ul>
+        <WeatherInfo />
       </div>
     </>
   )
