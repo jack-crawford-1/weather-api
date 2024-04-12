@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getWeather } from '../apis/weather'
 
-function WeatherDaily() {
+function Forecast() {
   const { isPending, isError, data } = useQuery({
     queryKey: ['weather'],
     queryFn: () => getWeather(),
@@ -60,4 +60,4 @@ function WeatherDaily() {
   )
 }
 
-export default WeatherDaily
+export default Forecast

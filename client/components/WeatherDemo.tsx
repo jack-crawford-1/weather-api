@@ -1,4 +1,6 @@
 function WeatherDemo() {
+  const today = new Date().toLocaleDateString('en-US', { weekday: 'long' })
+
   return (
     <>
       <div
@@ -11,6 +13,7 @@ function WeatherDemo() {
         }}
       >
         <div className="m-5">
+          <p>{today}</p>
           <p className="pt-5 text-9xl">12°C</p>
           <p className="pt-2">Heavy Rain</p>
         </div>

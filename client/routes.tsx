@@ -1,10 +1,11 @@
 // routes.tsx
-import { createBrowserRouter, Route } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 import App from './components/App'
 import Home from './components/Home'
 import WeatherCurrent from './components/WeatherCurrent'
-import WeatherDaily from './components/WeatherDaily'
+import Forecast from './components/Forecast'
 import WeatherDemo from './components/WeatherDemo'
+import WidgetForecast from './components/WidgetForecast'
 
 const router = createBrowserRouter([
   {
@@ -19,13 +20,17 @@ const router = createBrowserRouter([
         path: 'current',
         element: <WeatherCurrent />,
       },
-      {
-        path: 'forecast',
-        element: <WeatherDaily />,
-      },
+      // {
+      //   path: 'forecast',
+      //   element: <Forecast />,
+      // },
       {
         path: 'demo',
         element: <WeatherDemo />,
+      },
+      {
+        path: 'forecast',
+        element: <WidgetForecast />,
       },
     ],
   },

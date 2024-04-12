@@ -14,6 +14,8 @@ function Widget() {
     return <p>...Loading</p>
   }
 
+  const today = new Date().toLocaleDateString('en-US', { weekday: 'long' })
+
   return (
     <>
       <div
@@ -28,6 +30,7 @@ function Widget() {
         <div className="m-5">
           <p className="pt-5 text-9xl">{data.current.temperature}C</p>
           <p className="pt-2">Current Weather: {data.current.summary}</p>
+          <p className="mb-2 text-center text-lg font-bold">{today}</p>
         </div>
       </div>
     </>
