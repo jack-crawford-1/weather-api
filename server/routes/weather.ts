@@ -19,3 +19,5 @@ router.get('/', async (req, res, next) => {
 })
 
 export default router
+
+//   https://www.meteosource.com/api/v1/free/point?place_id=london&sections=all&timezone=UTC&language=en&units=metric&key=YOUR-API-KEY
