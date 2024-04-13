@@ -14,7 +14,7 @@ function Forecast() {
     return <p>...Loading</p>
   }
 
-  const formatDay = (dateString) => {
+  const formatDay = (dateString: string | number | Date) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', { weekday: 'long' })
   }

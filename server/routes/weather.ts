@@ -18,6 +18,17 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-export default router
+router.get('/location', async (req, res, next) => {
+  try {
+    const location = await request.get(
+      `https://www.meteosource.com/api/v1/free/nearest_place?lat=41.2924S&lon=174.7787E&key=${weatherApiKey}`,
+    )
 
-//   https://www.meteosource.com/api/v1/free/point?place_id=london&sections=all&timezone=UTC&language=en&units=metric&key=YOUR-API-KEY
+    res.json(location.body)
+  } catch (error) {
+    res.sendStatus(500)
+    next(error)
+  }
+})
+
+export default router

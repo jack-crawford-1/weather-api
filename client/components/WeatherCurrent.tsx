@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { getWeather } from '../apis/weather'
+import Location from './Location'
 
 function WeatherCurrent() {
   const { isPending, isError, data } = useQuery({
@@ -27,11 +28,12 @@ function WeatherCurrent() {
           minWidth: '40rem',
         }}
       >
-        <div className="text-left text-4xl">
+        <div className="p-8 text-left font-mono text-3xl">
           <img
             src={`icons/big/${data.current.icon_num}.png`}
             alt={data.current.icon}
           />
+          <h1>{<Location />}</h1>
           <p className="pt-3 text-6xl text-gray-200">{today}</p>
           <p className="pt-3 text-9xl">{data.current.temperature}°C</p>
           <p className="pt-2">{data.current.summary}</p>
@@ -42,6 +44,7 @@ function WeatherCurrent() {
           <p className="pt-1">Wind Angle: {data.current.wind.angle}°</p>
           <p className="pt-1"> Wind Direction: {data.current.wind.dir}</p>
           <p className="pt-1">Wind Speed: {data.current.wind.speed} KPH</p>
+          <p>Elevation: {data.elevation} m</p>
         </div>
       </div>
     </>
