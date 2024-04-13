@@ -53,7 +53,7 @@ function WidgetForecast() {
             temperature_min: 7,
             precipitation: { total: 2 },
           },
-          image: '/images/a.jpg',
+          image: '/images/.jpg',
           summary: 'Partly cloudy throughout the day.',
         },
         {
@@ -63,7 +63,7 @@ function WidgetForecast() {
             temperature_min: 5,
             precipitation: { total: 0 },
           },
-          image: '/images/b.jpg',
+          image: '/images/.jpg',
           summary: 'Mostly sunny.',
         },
         {
@@ -73,7 +73,7 @@ function WidgetForecast() {
             temperature_min: 8,
             precipitation: { total: 5 },
           },
-          image: '/images/c.jpg',
+          image: '/images/.jpg',
           summary: 'Light rain in the evening and overnight.',
         },
 
@@ -84,7 +84,7 @@ function WidgetForecast() {
             temperature_min: 6,
             precipitation: { total: 1 },
           },
-          image: '/images/d.jpg',
+          image: '/images/.jpg',
           summary: 'Overcast throughout the day.',
         },
         {
@@ -94,7 +94,7 @@ function WidgetForecast() {
             temperature_min: 9,
             precipitation: { total: 0 },
           },
-          image: '/images/e.jpg',
+          image: '/images/.jpg',
           summary: 'Clear sky.',
         },
         {
@@ -104,7 +104,7 @@ function WidgetForecast() {
             temperature_min: 10,
             precipitation: { total: 0 },
           },
-          image: '/images/f.jpg',
+          image: '/images/.jpg',
           summary: 'Sunny with a chance of showers.',
         },
         {
@@ -114,7 +114,7 @@ function WidgetForecast() {
             temperature_min: 11,
             precipitation: { total: 7 },
           },
-          image: '/images/g.jpg',
+          image: '/images/.jpg',
           summary: 'Rain in the morning.',
         },
       ],
@@ -129,7 +129,7 @@ function WidgetForecast() {
         {daily.data.map((dayData, index) => (
           <div
             key={index}
-            className="m-6 flex rounded-xl p-12 text-2xl font-extrabold text-gray-200 shadow-lg"
+            className="m-6 flex rounded-xl bg-blue-200 bg-opacity-50 p-9 text-2xl font-extrabold text-gray-200 shadow-lg"
             style={{
               height: '15rem',
               width: '15rem',
@@ -139,9 +139,9 @@ function WidgetForecast() {
               backgroundSize: 'cover',
             }}
           >
-            <div className="pt-9 text-center">
+            <div className="pt-4 text-center">
               <h3>{dayData.day.toDateString()}</h3>
-              <p className="pt-5 text-7xl">
+              <p className="pt-2 text-7xl">
                 {dayData.all_day.temperature_max}°C
               </p>
             </div>
