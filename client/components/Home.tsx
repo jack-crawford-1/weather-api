@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import WeatherDemo from './WeatherDemo'
 import WidgetForecast from './WidgetForecast'
 import Toggle from './Toggle'
+import WeatherCurrent from './WeatherCurrent'
 
 const desktopImage = '/images/a3.png'
-const mobileImage = '/images/a6.png'
+const mobileImage = '/images/a3.png'
 
 function Home() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -29,7 +29,7 @@ function Home() {
         className={`m-5 ${backgroundColor} bg-[url('${imageUrl}')] bg-contain bg-top bg-no-repeat p-10`}
       >
         <Toggle setBackgroundColor={setBackgroundColor} />
-        <WeatherDemo />
+        <WeatherCurrent />
         <WidgetForecast />
       </div>
     </>

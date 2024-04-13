@@ -14,30 +14,35 @@ function WeatherCurrent() {
     return <p>...Loading</p>
   }
 
-  console.log(data.daily)
+  const today = new Date().toLocaleDateString('en-US', { weekday: 'long' })
 
   return (
     <>
       <div
-        className="  m-6 rounded-xl border-8 border-black bg-[url('/images/a.jpg')] p-5 font-mono text-2xl text-gray-200 "
+        className="m-16 flex flex-col justify-end rounded-xl bg-cover p-12 text-2xl font-extrabold text-gray-200"
         style={{
-          height: '30rem',
-          width: '30rem',
-          minHeight: '30rem',
-          minWidth: '30rem',
+          height: '40rem',
+          width: '40rem',
+          minHeight: '40rem',
+          minWidth: '40rem',
         }}
       >
-        <img
-          src={`icons/big/${data.current.icon_num}.png`}
-          alt={data.current.icon}
-        />
-        <p>Current Weather: {data.current.summary}</p>
-        <p>Cloud Coverage: {data.current.cloud_cover}% </p>
-        <p>Precipitation: {data.current.precipitation.total}mm/h</p>
-        <p>Temperature: {data.current.temperature}°C</p>
-        <p>Wind Angle: {data.current.wind.angle}°</p>
-        <p>Wind Direction: {data.current.wind.dir}</p>
-        <p>Wind Speed: {data.current.wind.speed} KPH</p>
+        <div className="text-left text-4xl">
+          <img
+            src={`icons/big/${data.current.icon_num}.png`}
+            alt={data.current.icon}
+          />
+          <p className="pt-3 text-6xl text-gray-200">{today}</p>
+          <p className="pt-3 text-9xl">{data.current.temperature}°C</p>
+          <p className="pt-2">{data.current.summary}</p>
+          <p className="pt-1">Cloud Cover: {data.current.cloud_cover}% </p>
+          <p className="pt-1">
+            Rain Total: {data.current.precipitation.total}mm/h
+          </p>
+          <p className="pt-1">Wind Angle: {data.current.wind.angle}°</p>
+          <p className="pt-1"> Wind Direction: {data.current.wind.dir}</p>
+          <p className="pt-1">Wind Speed: {data.current.wind.speed} KPH</p>
+        </div>
       </div>
     </>
   )
