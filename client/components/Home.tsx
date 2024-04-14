@@ -2,6 +2,7 @@ import { useState } from 'react'
 import WidgetForecast from './WidgetForecast'
 import Toggle from './Toggle'
 import WeatherCurrent from './WeatherCurrent'
+import WidgetIcons from './WidgetIcons'
 // import WeatherIcon from './WeatherIcon'
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
           <div className="w-1/3"> {/* <WeatherIcon /> */}</div>
         </div>
         <WidgetForecast />
+        {/* <WidgetIcons /> */}
       </div>
     </>
   )
