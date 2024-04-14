@@ -24,7 +24,7 @@ function WidgetForecast() {
           return (
             <div
               key={index}
-              className="m-6 flex items-center rounded-xl bg-blue-200 bg-opacity-50 p-6 text-xl font-extrabold text-gray-200 shadow-lg"
+              className=" m-0.5 items-center rounded-xl bg-blue-200 bg-opacity-50 p-6 text-xl font-extrabold text-gray-200 shadow-lg"
               style={{
                 height: '15rem',
                 width: '15rem',

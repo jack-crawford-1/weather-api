@@ -19,7 +19,7 @@ function Widget() {
   return (
     <>
       <div
-        className="m-16 flex flex-col justify-end rounded-xl  bg-[url('/images/c.jpg')] bg-cover p-12 text-2xl font-extrabold text-gray-200"
+        className="m-0 flex flex-col justify-end rounded-xl  bg-[url('/images/c.jpg')] bg-cover p-12 text-2xl font-extrabold text-gray-200"
         style={{
           height: '30rem',
           width: '30rem',
