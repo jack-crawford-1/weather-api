@@ -14,12 +14,13 @@ function WidgetForecast() {
     return <p>...Loading</p>
   }
 
-  console.log(data)
+  console.log(data.daily.data)
   return (
     <>
       <div className="index-1 align-center m-5 flex flex-row flex-wrap justify-center">
         {data.daily.data.map((dayData, index) => {
           const dateObject = new Date(dayData.day)
+          const iconNum = dayData.all_day.icon
 
           return (
             <div
@@ -41,8 +42,8 @@ function WidgetForecast() {
                   {dayData.all_day.wind.dir} {dayData.all_day.wind.speed} KM/H
                 </p>
                 <img
-                  src={`icons/big/${data.current.icon_num}.png`}
-                  alt={data.current.icon}
+                  src={`icons/big/${iconNum}.png`}
+                  alt={`Weather icon number ${iconNum}`}
                 />
               </div>
             </div>
