@@ -17,7 +17,7 @@ function WidgetForecast() {
   console.log(data.daily.data)
   return (
     <>
-      <div className="index-1 align-center m-5 flex flex-row flex-wrap justify-center">
+      <div className="index-1 align-start flex flex-row flex-wrap justify-center">
         {data.daily.data.map((dayData, index) => {
           const dateObject = new Date(dayData.day)
           const iconNum = dayData.all_day.icon
@@ -25,26 +25,34 @@ function WidgetForecast() {
           return (
             <div
               key={index}
-              className=" m-0.5 items-center rounded-xl bg-blue-200 bg-opacity-50 p-6 text-xl font-extrabold text-gray-200 shadow-lg"
+              className=" m-0.5 mb-10 items-center rounded-xl bg-blue-200 bg-opacity-20 p-2 font-extrabold text-gray-200 shadow-lg"
               style={{
-                height: '15rem',
-                width: '15rem',
-                minHeight: '15rem',
-                minWidth: '15rem',
+                height: '10rem',
+                width: '10rem',
+                minHeight: '10rem',
+                minWidth: '10rem',
               }}
             >
-              <div className="pt-4 text-center">
+              <div className="pt-4 text-left">
                 <h3>{dateObject.toDateString()}</h3>{' '}
-                <p className="pt-2 text-6xl">
+                <p className="pt-2">
+                  {dayData.all_day.temperature_min} /{' '}
                   {dayData.all_day.temperature_max}°C
                 </p>
-                <p>
-                  {dayData.all_day.wind.dir} {dayData.all_day.wind.speed} KM/H
-                </p>
-                <img
-                  src={`icons/big/${iconNum}.png`}
-                  alt={`Weather icon number ${iconNum}`}
-                />
+                <div className="flex flex-row">
+                  <img
+                    src={`icons/medium/${iconNum}.png`}
+                    alt={`Weather icon number ${iconNum}`}
+                  />
+                  <div>
+                    <p className="text-sm">
+                      Rain: {dayData.all_day.precipitation.total} mm
+                    </p>
+                    <p className="text-sm">
+                      Wind: {dayData.all_day.wind.speed} KM/H
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           )

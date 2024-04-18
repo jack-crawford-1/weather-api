@@ -9,7 +9,7 @@ function Toggle({
 
   const handleCheckboxChange = () => {
     setIsToggled(!isToggled)
-    setBackgroundColor(!isToggled ? 'bg-black' : 'bg-blue-300')
+    setBackgroundColor(!isToggled ? 'bg-black' : 'bg-blue-400')
   }
 
   return (

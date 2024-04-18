@@ -20,7 +20,7 @@ function WeatherCurrent() {
   return (
     <>
       <div
-        className=" flex flex-col justify-end rounded-xl bg-cover p-10 text-2xl font-extrabold text-gray-200"
+        className=" ml-10 flex flex-col justify-start rounded-xl bg-cover p-10 text-2xl font-extrabold text-gray-200"
         style={{
           height: '40rem',
           width: '40rem',
@@ -28,14 +28,14 @@ function WeatherCurrent() {
           minWidth: '40rem',
         }}
       >
-        <div className="p-3 text-left font-mono text-3xl">
+        <div className="p-3 text-left font-mono text-xl">
           <img
             src={`icons/big/${data.current.icon_num}.png`}
             alt={data.current.icon}
           />
           <h1>{<Location />}</h1>
-          <p className="pt-3 text-4xl text-gray-200">{today}</p>
-          <p className="pt-3 text-9xl">{data.current.temperature}°C</p>
+          <p className="pt-3 text-3xl text-gray-200">{today}</p>
+          <p className="pt-3 text-5xl">{data.current.temperature}°C</p>
           <p className="pt-2">{data.current.summary}</p>
           <p className="pt-1">Cloud Cover: {data.current.cloud_cover}% </p>
           <p className="pt-1">
