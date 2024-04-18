@@ -4,27 +4,22 @@ import Toggle from './Toggle'
 import WeatherCurrent from './WeatherCurrent'
 
 function Home() {
-  const [backgroundColor, setBackgroundColor] = useState('bg-blue-300')
+  const [backgroundColor, setBackgroundColor] = useState('bg-blue-400')
 
   return (
     <>
       <div
-        className={`${backgroundColor} m-0 box-border h-full bg-[url('/images/a3.png')] bg-contain bg-top bg-no-repeat p-10`}
+        className={`${backgroundColor} m-0 box-border h-full bg-[url('/images/a3.png')] bg-contain bg-top bg-no-repeat p-1`}
       >
-        {' '}
-        {/* <Header /> */}
         <span className="float-right">
           <Toggle setBackgroundColor={setBackgroundColor} />
         </span>
-        <div className="">
-          {' '}
-          <div className="w-2/3">
-            {' '}
+        <div className="flex flex-col content-center">
+          <div>
             <WeatherCurrent />
+            <WidgetForecast />
           </div>
-          <div className="w-1/3"> {/* <WeatherIcon /> */}</div>
         </div>
-        <WidgetForecast />
       </div>
     </>
   )
