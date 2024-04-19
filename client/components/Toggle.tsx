@@ -27,15 +27,15 @@ function Toggle({
           className="sr-only"
         />
         <span
-          className={`mx-2 flex h-6 w-[48px] items-center rounded-full p-1 duration-200 md:mx-4 md:h-8 md:w-[60px] ${
-            isToggled
-              ? 'bg-[url("/images/a10.jpeg")] bg-cover'
-              : 'bg-[url("/images/a11.jpeg")] bg-cover'
+          className={`mx-2 flex h-6 w-[48px] items-center rounded-full p-1 duration-200 md:mx-4 md:h-7 md:w-[60px] ${
+            isToggled ? 'bg-blue-400' : 'bg-black'
           }`}
         >
           <span
-            className={`dot h-6 w-6 rounded-full bg-white duration-200 md:h-8 md:w-8 ${
-              isToggled ? 'translate-x-[20px] md:translate-x-[28px]' : ''
+            className={`dot h-6 w-6 rounded-full  duration-200 md:h-9 md:w-9 ${
+              isToggled
+                ? 'translate-x-[20px] bg-[url("/images/sun1.png")] bg-cover md:h-10 md:w-10 md:translate-x-[28px]'
+                : 'bg-[url("/images/a11.jpeg")] bg-cover md:h-9 md:w-9'
             }`}
           ></span>
         </span>
