@@ -1,3 +1,4 @@
+import { BeatLoader } from 'react-spinners'
 import { getLocation } from '../apis/weather'
 import { useQuery } from '@tanstack/react-query'
 
@@ -11,7 +12,11 @@ function Location() {
   }
 
   if (isPending) {
-    return <p>...Loading</p>
+    return (
+      <p>
+        <BeatLoader color="#ffffff" />
+      </p>
+    )
   }
 
   return (

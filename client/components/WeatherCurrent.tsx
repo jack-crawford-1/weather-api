@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { getWeather } from '../apis/weather'
 import Location from './Location'
+import { BeatLoader, PacmanLoader } from 'react-spinners'
 
 function WeatherCurrent() {
   const { isPending, isError, data } = useQuery({
@@ -12,7 +13,11 @@ function WeatherCurrent() {
   }
 
   if (isPending) {
-    return <p></p>
+    return (
+      <p>
+        <BeatLoader color="#ffffff" />
+      </p>
+    )
   }
 
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long' })

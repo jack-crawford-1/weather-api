@@ -6,7 +6,6 @@ import WeatherCurrent from './WeatherCurrent'
 function Home() {
   const [backgroundColor, setBackgroundColor] = useState('bg-blue-400')
   const [backgroundImage, setBackgroundImage] = useState('url(/images/a3.png)')
-
   const backgroundSize = backgroundImage.includes('a6.png') ? '30%' : 'contain'
 
   return (

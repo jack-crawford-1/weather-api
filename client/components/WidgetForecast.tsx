@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { getWeather } from '../apis/weather'
+import { PacmanLoader } from 'react-spinners'
 
 function WidgetForecast() {
   const { isPending, isError, data } = useQuery({
@@ -12,7 +13,7 @@ function WidgetForecast() {
   }
 
   if (isPending) {
-    return <p>...Loading</p>
+    return <p>{/* <PacmanLoader color="#36d7b7" /> */}</p>
   }
 
   return (
@@ -24,7 +25,7 @@ function WidgetForecast() {
         return (
           <div
             key={index}
-            className="m-1 w-full items-center rounded-2xl bg-blue-500 bg-opacity-50 p-2 font-rubik font-bold text-white shadow-lg md:w-auto md:min-w-0"
+            className="m-1 w-full items-center rounded-2xl bg-blue-700 bg-opacity-50 p-2 font-rubik font-bold text-white shadow-lg md:w-auto md:min-w-0"
             style={{
               height: 'fit-content',
               minHeight: '6rem',

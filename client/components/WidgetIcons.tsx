@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { getWeather } from '../apis/weather'
+import { PacmanLoader } from 'react-spinners'
 
 function WidgetIcons() {
   const { isPending, isError, data } = useQuery({
@@ -11,7 +12,7 @@ function WidgetIcons() {
   }
 
   if (isPending) {
-    return <p>...Loading</p>
+    return <p>{/* <PacmanLoader color="#36d7b7" /> */}</p>
   }
 
   console.log(data.daily.data)
