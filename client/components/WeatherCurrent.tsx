@@ -12,7 +12,7 @@ function WeatherCurrent() {
   }
 
   if (isPending) {
-    return <p>...Loading</p>
+    return <p></p>
   }
 
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long' })
@@ -20,21 +20,21 @@ function WeatherCurrent() {
   return (
     <>
       <div
-        className=" ml-10 flex flex-col justify-start rounded-xl bg-cover p-10 text-2xl font-extrabold text-gray-200"
+        className="m-10 flex flex-col justify-start rounded-xl bg-cover  p-2 text-2xl font-bold tracking-wide text-white"
         style={{
-          height: '40rem',
-          width: '40rem',
-          minHeight: '40rem',
-          minWidth: '40rem',
+          height: 'fit-content',
+          width: 'fit-content',
+          minHeight: '20rem',
+          minWidth: '20rem',
         }}
       >
-        <div className="p-3 text-left font-mono text-xl">
+        <div className="p-3 text-left text-xl">
           <img
             src={`icons/big/${data.current.icon_num}.png`}
             alt={data.current.icon}
           />
-          <h1>{<Location />}</h1>
-          <p className="pt-3 text-3xl text-gray-200">{today}</p>
+          <h1 className="font-rubik-mono">{<Location />}</h1>
+          <p className=" pt-3 text-3xl">{today}</p>
           <p className="pt-3 text-5xl">{data.current.temperature}°C</p>
           <p className="pt-2">{data.current.summary}</p>
           <p className="pt-1">Cloud Cover: {data.current.cloud_cover}% </p>
@@ -43,7 +43,7 @@ function WeatherCurrent() {
           </p>
           <p className="pt-1">Wind Angle: {data.current.wind.angle}°</p>
           <p className="pt-1"> Wind Direction: {data.current.wind.dir}</p>
-          <p className="pt-1">Wind Speed: {data.current.wind.speed} KPH</p>
+          <p className="pt-1">Wind Speed: {data.current.wind.speed} km/h</p>
           <p>Elevation: {data.elevation} m</p>
         </div>
       </div>

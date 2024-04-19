@@ -2,7 +2,12 @@
 export default {
   content: ['./index.html', './client/**/*.tsx'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'rubik-mono': ['Rubik Mono One', 'sans-serif'],
+        rubik: ['Rubik', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
