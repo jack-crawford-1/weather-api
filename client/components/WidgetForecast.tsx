@@ -25,7 +25,7 @@ function WidgetForecast() {
         return (
           <div
             key={index}
-            className="m-1 w-full items-center rounded-2xl bg-blue-700 bg-opacity-50 p-2 font-rubik font-bold text-white shadow-lg md:w-auto md:min-w-0"
+            className="m-1 w-full items-center rounded-2xl bg-blue-400 bg-opacity-20 p-2 font-rubik font-bold text-white shadow-lg md:w-auto md:min-w-0"
             style={{
               height: 'fit-content',
               minHeight: '6rem',
