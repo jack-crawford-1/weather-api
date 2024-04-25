@@ -2,6 +2,7 @@ import { useState } from 'react'
 import WidgetForecast from './WidgetForecast'
 import Toggle from './Toggle'
 import WeatherCurrent from './WeatherCurrent'
+import { Link } from 'react-router-dom'
 
 function Home() {
   const [backgroundColor, setBackgroundColor] = useState('bg-blue-400')
@@ -23,6 +24,9 @@ function Home() {
             setBackgroundImage={setBackgroundImage}
           />
         </span>
+        <Link to="/about" className="font-rubik-mono text-2xl text-gray-200">
+          About
+        </Link>
         <div className="m-10 font-rubik">
           <div>
             <WeatherCurrent />
